@@ -1,0 +1,58 @@
+<!-- index.wxml -->
+<view class="container flex-wrp">
+  <view class="nav-top">
+    <block wx:for="{{navTopItems}}">
+      <view class="nav-top-list {{curNav == item.id ? 'active' : ''}}" bindtap="switchBottomTab" data-id="{{item.id}}">
+        {{item.text}}
+      </view>
+    </block>
+  </view>
+  <view class="nav-bottom flex-item">
+    <scroll-view scroll-y wx:if="{{curNav == 1}}">
+      <view class="content-block row" wx:for="{{orderList}}" data-id="{{item.id}}">
+        <view class="row flex-wrp row-first">
+          <view class="flex-item block-first">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="flex-item block-first">
+            <text>类型：{{item.type}}人</text>
+          </view>
+          <view class="flex-item">
+            <button class="block-button" size="mini" type="{{item.status.type}}">{{item.status.text}}</button>
+          </view>
+        </view>
+        <view class="row flex-wrp">
+          <view class="flex-item block-first">
+            <text>{{item.order}}</text>
+          </view>
+          <view class="flex-item block-time">
+            <text>{{item.startTime}} - {{item.endTime}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="scroll-view_H" scroll-y wx:else>
+      <view class="content-block row" wx:for="{{endList}}" data-id="{{item.id}}">
+        <view class="row flex-wrp row-first">
+          <view class="flex-item block-first">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="flex-item block-first">
+            <text>类型：{{item.type}}人</text>
+          </view>
+          <view class="flex-item">
+            <text>{{item.status}}</text>
+          </view>
+        </view>
+        <view class="row flex-wrp">
+          <view class="flex-item block-first">
+            <text>{{item.order}}</text>
+          </view>
+          <view class="flex-item block-time">
+            <text>{{item.startTime}} - {{item.endTime}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

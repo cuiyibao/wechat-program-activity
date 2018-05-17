@@ -1,0 +1,11 @@
+.flex-wrp {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.row {
+  width: 100%;
+}

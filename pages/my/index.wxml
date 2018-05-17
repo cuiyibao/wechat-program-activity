@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  我的
+  <image src="http://dummyimage.com/'200x100'/#894FC4"/>
+</view>
