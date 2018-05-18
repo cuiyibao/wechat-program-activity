@@ -24,6 +24,5 @@ view,block{
     margin: 0;
 }
 page{
-    background: #f5f5f5;
     font-size: 32rpx;
 }

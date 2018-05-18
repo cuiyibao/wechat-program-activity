@@ -1,6 +1,6 @@
 <!-- index.wxml -->
-<view class="container flex-wrp">
-  <form class="form">
+<view class="container">
+  <form class="form" bindsubmit="formSubmit" bindreset="formReset">
     <view class="form-item">
       <view class="form-el">活动类型:</view>
       <view class="form-rl">
@@ -17,8 +17,14 @@
       <view class="form-el">人数限制:</view>
       <view class="form-rl">
         <label class="checkbox">
-          <checkbox value="no" />不限制
+          <checkbox value="no"/>不限制
         </label>
+        <view class="select-perNum">
+          <input type="text"></input>
+        </view>
+         <view class="select-perNum" style="left:420rpx;">
+          <text>人</text>
+        </view>
       </view>
     </view>
     <view class="form-item">
@@ -38,7 +44,7 @@
       <view class="form-rl">
         <radio-group>
           <label class="radio">
-            <radio value="in" />参与
+            <radio value="in"/>参与
           </label>
           <label class="radio">
             <radio value="notIn" />不参与
@@ -48,10 +54,10 @@
     </view>
      <view class="form-submit">
       <view class="form-el">
-        <button formType="submit">发起</button>
+        <button formType="submit" type="primary">发起</button>
       </view>
       <view class="form-rl">
-         <button formType="reset">取消</button>
+         <button formType="reset" type="default">取消</button>
       </view>
     </view>
   </form>

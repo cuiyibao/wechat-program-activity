@@ -1,5 +1,38 @@
 <!--index.wxml-->
 <view class="container">
-  我的
-  <image src="http://dummyimage.com/'200x100'/#894FC4"/>
+  <form class="form" bindsubmit="formSubmit" bindreset="formReset">
+    <view class="form-item">
+      <view class="form-el require">尊姓大名:</view>
+      <view class="form-rl">
+        <input type="text"></input>
+      </view>
+    </view>
+    <view class="form-item">
+      <view class="form-el">性别:</view>
+      <view class="form-rl">
+        <radio-group>
+          <label class="radio">
+            <radio value="male" checked/>男
+          </label>
+          <label class="radio">
+            <radio value="female" />女
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="form-item">
+      <view class="form-el require">联系电话:</view>
+      <view class="form-rl">
+        <input type="text"></input>
+      </view>
+    </view>
+     <view class="form-submit">
+      <view class="form-el">
+        <button formType="submit" type="primary">确认</button>
+      </view>
+      <view class="form-rl">
+         <button formType="reset" type="default">取消</button>
+      </view>
+    </view>
+  </form>
 </view>

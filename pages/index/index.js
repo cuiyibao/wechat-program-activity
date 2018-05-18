@@ -43,5 +43,8 @@ Page({
 		this.setData({
 			curNav: id,
 		})
+    },
+    navDetail: function(e) {
+        console.log(e.target)
     }
 })

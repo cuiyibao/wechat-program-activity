@@ -9,3 +9,71 @@
 .row {
   width: 100%;
 }
+
+/*表单form*/
+.form{
+  padding: 20rpx;
+}
+.form .form-item{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin: 20rpx 10rpx;
+  width: 100%;
+}
+.form .form-item .form-el{
+  padding-right: 10rpx;
+  text-align: left;
+  height: 64rpx;
+  line-height: 64rpx;
+  width: 168rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.form .form-item .form-el.require::before{
+  content: "*";
+  color: #ea5858;
+  margin-right: 4rpx;
+}
+.form .form-item .form-rl{
+  flex: 1;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.form .form-item .checkbox,.radio{
+  margin: 0 20rpx;
+}
+.form .form-item checkbox,radio{
+  transform:scale(.7)
+}
+.form .form-item input[type="text"]{
+  margin: 0 20rpx;
+  padding: 0 10rpx;
+  border: 1px solid #dedede;
+}
+
+.form .form-submit{
+  display: flex;
+  flex-direction: row;
+  margin: 0 10rpx;
+  padding: 30rpx 0;
+  width: 100%;
+  border-top: 1px solid #dedede;
+}
+.form .form-submit .form-el{
+  flex: 1;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+}
+.form .form-submit .form-rl{
+  flex: 1;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+}
+.form .form-submit button{
+  display: inline-block;
+  font-size: 32rpx;
+}

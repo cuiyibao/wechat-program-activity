@@ -9,7 +9,7 @@
     font-size: 36rpx;
 }
 .nav-top{
-    height: 120rpx;
+    height: 100rpx;
     width: 100%;
 }
 .nav-top::after{
@@ -18,17 +18,17 @@
     top: 0;
     left: 50%;
     width: 1px;
-    height: 120rpx;
+    height: 100rpx;
     background: #dedede;
 }
 .nav-top .nav-top-list{
     display: inline-block;
-    height: 120rpx;
+    height: 100rpx;
     width: 50%;
-    line-height: 120rpx;
+    line-height: 100rpx;
     text-align: center;
     border-bottom: 1px solid #dedede;
-    font-size: 36rpx;
+    cursor: pointer;
 }
 .nav-top .nav-top-list.active{
     background: #fff;
@@ -38,7 +38,7 @@
 .nav-bottom{
     margin-top: 2rpx;
     width: 100%;
-    padding: 30rpx;
+    padding: 20rpx 30rpx;
     box-sizing: border-box;
     overflow-y: auto;
 }
@@ -65,6 +65,9 @@
     height: 92rpx ;
     line-height: 92rpx;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .nav-bottom .block-first::after{
     content: "";
